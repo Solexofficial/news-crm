@@ -1,15 +1,13 @@
+import { useTheme } from "app/providers/ThemeProvider";
+import { AboutPageAsync } from "pages/AboutPage/AboutPage.async";
+import { MainPageAsync } from "pages/MainPage/MainPage.async";
 import { Suspense } from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import { classNames } from "./helpers/classnames/classNames";
-import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
-import { MainPageAsync } from "./pages/MainPage/MainPage.async";
+import { classNames } from "shared/config/lib/classnames/classNames";
 import "./styles/index.scss";
-import { useTheme } from "./theme/useTheme";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
-
-  classNames("remove-btn", { hovered: true, selectable: true, pdg: false }, ["pdg"]);
 
   return (
     <div className={classNames("app", {}, [theme])}>

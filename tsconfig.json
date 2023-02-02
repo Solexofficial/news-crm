@@ -3,18 +3,23 @@
         "outDir": "./dist/",
         "noImplicitAny": true,
         "module": "ESNext",
+        "moduleResolution": "node",
         "target": "ES5",
         "jsx": "react-jsx",
         "allowJs": true,
-        "moduleResolution": "node",
         "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
         "allowSyntheticDefaultImports": true,
-        "baseUrl": "."
+        "baseUrl": ".",
+        "paths": {
+            "*": ["./src/*"]
+          },
     },
     "ts-node": {
         "compilerOptions": {
             "module": "CommonJS"
-            
         }
     }
 }
