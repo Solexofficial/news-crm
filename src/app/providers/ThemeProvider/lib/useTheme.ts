@@ -3,7 +3,8 @@ import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext";
 
 interface UseThemeResult {
   theme: Theme;
-  toggleTheme: Dispatch<SetStateAction<Theme>>;
+  // toggleTheme: Dispatch<SetStateAction<Theme>>;
+  toggleTheme: () => void;
 }
 
 export function useTheme(): UseThemeResult {
