@@ -1,5 +1,5 @@
-import { AppRouter } from "app/providers/router";
 import { useTheme } from "app/providers/ThemeProvider";
+import { Routing } from "pages";
 import { classNames } from "shared/lib/classnames/classNames";
 import { Navbar } from "widgets/Navbar";
 import "./styles/index.scss";
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
-      <AppRouter />
+      <Routing />
       <button onClick={toggleTheme}>TOGGLE</button>
     </div>
   );

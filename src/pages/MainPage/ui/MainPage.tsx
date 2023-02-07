@@ -1,7 +1,3 @@
-type Props = {};
-
-const MainPage = (props: Props) => {
+export const MainPage = () => {
   return <div>MainPage</div>;
 };
-
-export default MainPage;
