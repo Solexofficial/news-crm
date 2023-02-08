@@ -5,7 +5,7 @@ import { AppRoutes, RouterPath } from "shared/config/routeConfig/routeConfig";
 const MainPage = lazy(() => import("./MainPage"));
 const AboutPage = lazy(() => import("./AboutPage"));
 
-const routes: RouteProps[] = [
+export const routes: RouteProps[] = [
   {
     path: RouterPath[AppRoutes.MAIN],
     element: <MainPage />,
