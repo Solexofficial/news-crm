@@ -21,7 +21,15 @@ export const Routing = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         {routes.map(({ path, element }) => (
-          <Route path={path} element={element} key={path} />
+          <Route
+            key={path}
+            path={path}
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <div className="page-wrapper">{element}</div>
+              </Suspense>
+            }
+          />
         ))}
       </Routes>
     </Suspense>
