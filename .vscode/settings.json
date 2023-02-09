@@ -1,0 +1,11 @@
+{
+  "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.sourceLanguage": "ru",
+  "i18n-ally.extract.autoDetect": true,
+  "i18n-ally.extract.ignoredByFiles": {
+    "src\\pages\\MainPage\\ui\\MainPage.tsx": [
+      "\r\n      Главная страница\r\n    "
+    ]
+  }
+}
