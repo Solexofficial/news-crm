@@ -6,5 +6,7 @@
   "i18n-ally.extract.ignoredByFiles": {
     "src\\pages\\MainPage\\ui\\MainPage.tsx": ["\r\n      Главная страница\r\n    "]
   },
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "stylelint.useLocal": true,
+  "stylelint.autoFixOnSave": true
 }
