@@ -11,6 +11,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:i18next/recommended',
   ],
   overrides: [],
   parserOptions: {
@@ -19,7 +20,7 @@ module.exports = {
     project: 'tsconfig.eslint.json',
     tsconfigRootDir: __dirname,
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'i18next'],
   rules: {
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
@@ -44,6 +45,7 @@ module.exports = {
     'no-console': ['error', { allow: ['warn', 'error'] }],
     '@typescript-eslint/naming-convention': 'warn',
     'no-underscore-dangle': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,
