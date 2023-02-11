@@ -42,5 +42,10 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
+    '@typescript-eslint/naming-convention': 'warn',
+    'no-underscore-dangle': 'off',
+  },
+  globals: {
+    __IS_DEV__: true,
   },
 };
