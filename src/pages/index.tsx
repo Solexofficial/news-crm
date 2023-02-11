@@ -1,9 +1,9 @@
-import { lazy, Suspense } from "react";
-import { Route, RouteProps, Routes } from "react-router-dom";
-import { AppRoutes, RouterPath } from "shared/config/routeConfig/routeConfig";
+import { lazy, Suspense } from 'react';
+import { Route, RouteProps, Routes } from 'react-router-dom';
+import { AppRoutes, RouterPath } from 'shared/config/routeConfig/routeConfig';
 
-const MainPage = lazy(() => import("./MainPage"));
-const AboutPage = lazy(() => import("./AboutPage"));
+const MainPage = lazy(() => import('./MainPage'));
+const AboutPage = lazy(() => import('./AboutPage'));
 
 export const routes: RouteProps[] = [
   {

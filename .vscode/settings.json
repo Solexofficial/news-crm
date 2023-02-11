@@ -7,5 +7,6 @@
     "src\\pages\\MainPage\\ui\\MainPage.tsx": [
       "\r\n      Главная страница\r\n    "
     ]
-  }
+  },
+  "typescript.tsserver.pluginPaths": ["typescript-plugin-css-modules"]
 }
