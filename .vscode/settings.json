@@ -1,4 +1,10 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  "stylelint.useLocal": true,
+  "stylelint.autoFixOnSave": true,
+
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "i18n-ally.keystyle": "flat",
   "i18n-ally.sourceLanguage": "ru",
@@ -7,6 +13,5 @@
     "src\\pages\\MainPage\\ui\\MainPage.tsx": ["\r\n      Главная страница\r\n    "]
   },
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "stylelint.useLocal": true,
-  "stylelint.autoFixOnSave": true
+  "stylelint.enable": true
 }

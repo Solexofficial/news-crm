@@ -1,3 +1,4 @@
+import { NotFoundPage } from 'pages/NotFoundPage';
 import { lazy, Suspense } from 'react';
 import { Route, RouteProps, Routes } from 'react-router-dom';
 import { AppRoutes, RouterPath } from 'shared/config/routeConfig/routeConfig';
@@ -13,6 +14,10 @@ export const routes: RouteProps[] = [
   {
     path: RouterPath[AppRoutes.ABOUT],
     element: <AboutPage />,
+  },
+  {
+    path: RouterPath[AppRoutes.NOT_FOUND],
+    element: <NotFoundPage />,
   },
 ];
 
