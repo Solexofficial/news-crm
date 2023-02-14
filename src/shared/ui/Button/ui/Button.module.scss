@@ -5,7 +5,11 @@
 
 .clear {
   padding: 0;
-  border: none;
   background: none;
+  border: none;
   outline: none;
+}
+
+.primary {
+  color: var(--primary-color);
 }
