@@ -14,7 +14,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:i18next/recommended',
   ],
-  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -49,7 +48,7 @@ module.exports = {
     'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
     'max-len': [
       'error',
-      { code: 100, ignoreComments: true, ignorePattern: '^import |^export {(.*?)}' },
+      { code: 100, ignoreComments: true, ignorePattern: '^import\\s.+\\sfrom\\s.+;$' },
     ],
   },
   globals: {
