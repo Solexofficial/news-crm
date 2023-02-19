@@ -26,12 +26,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
-    'react/function-component-definition': [
-      2,
-      {
-        namedComponents: 'arrow-function',
-      },
-    ],
+    'react/function-component-definition': 'off',
     'react/jsx-filename-extension': [
       2,
       {
