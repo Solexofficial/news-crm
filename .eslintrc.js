@@ -18,21 +18,15 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: 'tsconfig.eslint.json',
-    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'i18next'],
+
   rules: {
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
     'react/function-component-definition': 'off',
-    'react/jsx-filename-extension': [
-      2,
-      {
-        extensions: ['.js', '.jsx', '.tsx'],
-      },
-    ],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',
