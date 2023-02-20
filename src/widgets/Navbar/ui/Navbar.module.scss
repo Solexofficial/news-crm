@@ -1,24 +1,29 @@
 .navbar {
-  width: 100%;
-  height: var(--navbar-height);
-  background: var(--inverted-bg-color);
   display: flex;
   align-items: center;
+
+  width: 100%;
+  height: var(--navbar-height);
   padding: 20px;
+
+  background: var(--inverted-bg-color);
 }
 
 .links {
   display: flex;
   flex: 1;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
+
   height: 100%;
 }
 
 .mainLink {
+  margin-right: 20px;
+
   font: var(--font-m);
   color: var(--inverted-primary-color);
-  margin-right: 20px;
   text-decoration: none;
+
   transition: color 0.2s ease-in-out;
 }

@@ -14,7 +14,7 @@ type AppLinkProps = LinkProps & {
 };
 
 export const AppLink: FC<AppLinkProps> = ({
-  to,
+  to = '/',
   className = '',
   children,
   theme = AppLinkTheme.PRIMARY,

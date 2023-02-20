@@ -24,5 +24,6 @@
       "module": "CommonJS"
     }
   },
-  "include": ["src", "./config/jest/setupTest.ts"]
+  "include": [".eslintrc.js", "**/*.ts", "**/*.tsx"],
+  "exclude": ["./node_modules", "./dist"]
 }
