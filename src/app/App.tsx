@@ -1,7 +1,7 @@
 import { useTheme } from 'app/providers/ThemeProvider';
 import { Routing } from 'pages';
 import { Suspense } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames2/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import './styles/index.scss';
