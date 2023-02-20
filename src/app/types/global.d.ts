@@ -1,11 +1,7 @@
-declare module '*.module.css' {
-  const classes: { [key: string]: string };
-  export default classes;
-}
-
-declare module '*.module.scss' {
-  const classes: { [key: string]: string };
-  export default classes;
+declare module '*.scss' {
+  type ClassNames = Record<string, string>;
+  const classNames: ClassNames;
+  export = classNames;
 }
 
 declare module '*.png';
