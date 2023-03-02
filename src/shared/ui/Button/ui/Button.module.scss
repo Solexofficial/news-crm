@@ -1,5 +1,6 @@
 .button {
   cursor: pointer;
+  padding: 6px 15px;
   color: var(--inverted-primary-color);
 }
 
@@ -15,7 +16,6 @@
 }
 
 .outline {
-  padding: 10px 15px;
   color: var(--primary-color);
   background: none;
   border: 1px solid var(--primary-color);
@@ -53,4 +53,16 @@
     height: var(--font-line-xl);
     font: var(--font-xl);
   }
+}
+
+.size_m {
+  font: var(--font-m);
+}
+
+.size_l {
+  font: var(--font-l);
+}
+
+.size_xl {
+  font: var(--font-xl);
 }
