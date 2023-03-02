@@ -24,6 +24,34 @@
   margin-left: 20px;
 }
 
+.collapseBtn {
+  position: absolute;
+  z-index: 2;
+  right: -32px;
+  bottom: 32px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.link {
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+}
+
 .collapsed {
   width: var(--sidebar-width-collapsed);
 
@@ -34,11 +62,10 @@
   .lang {
     margin-left: 0;
   }
-}
 
-.collapseBtn {
-  position: absolute;
-  z-index: 2;
-  right: -32px;
-  bottom: 32px;
+  .link {
+    width: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
 }
