@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { ThemeDecorator } from 'shared/config/storybook';
 import { ButtonTheme } from '..';
 import { Button, ButtonSize } from './Button';
 
@@ -28,6 +28,14 @@ Clear.args = {
 };
 
 Clear.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+  children: 'Text',
+  variant: ButtonTheme.CLEAR_INVERTED,
+};
+
+ClearInverted.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Outline = Template.bind({});
 Outline.args = {

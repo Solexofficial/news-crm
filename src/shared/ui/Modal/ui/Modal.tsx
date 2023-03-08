@@ -1,17 +1,18 @@
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Portal } from 'shared/ui/Portal';
 import cls from './Modal.module.scss';
 
-interface ModalProps {
+type ModalProps = {
   className?: string;
   children?: ReactNode;
   isOpen: boolean;
   onClose?: () => void;
-}
+};
 
 const ANIMATION_DELAY = 300;
 
-export const Modal = ({ children, className = '', isOpen, onClose }: ModalProps) => {
+export const Modal: FC<ModalProps> = ({ children, className = '', isOpen, onClose }) => {
   const [isClosing, setIsClosing] = useState(false);
 
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
@@ -56,12 +57,14 @@ export const Modal = ({ children, className = '', isOpen, onClose }: ModalProps)
   };
 
   return (
-    <div className={classNames(cls.modal, mods, [className])}>
-      <div className={cls.overlay} onClick={closeHandler} onKeyDown={keyDownHandler}>
-        <div className={cls.content} onClick={contentClickHandler} role="button" tabIndex={1}>
-          {children}
+    <Portal>
+      <div className={classNames(cls.modal, mods, [className])}>
+        <div className={cls.overlay} onClick={closeHandler} onKeyDown={keyDownHandler}>
+          <div className={cls.content} onClick={contentClickHandler}>
+            {children}
+          </div>
         </div>
       </div>
-    </div>
+    </Portal>
   );
 };
