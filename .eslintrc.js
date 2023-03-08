@@ -20,9 +20,13 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', '@typescript-eslint', 'prettier', 'i18next'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier', 'i18next'],
 
   rules: {
+    'jsx-a11y/no-static-element-interactions': 'warn',
+    'jsx-a11y/click-events-have-key-events': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
