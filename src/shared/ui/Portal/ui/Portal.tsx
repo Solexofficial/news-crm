@@ -6,6 +6,9 @@ type PortalProps = {
   element?: HTMLElement;
 };
 
-export const Portal: FC<PortalProps> = ({ children, element = document.body }) => {
+export const Portal: FC<PortalProps> = ({
+  children,
+  element = document.getElementById('root') as HTMLElement,
+}) => {
   return createPortal(children, element);
 };
