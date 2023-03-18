@@ -74,14 +74,16 @@ module.exports = {
         ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
       },
     ],
+    'no-param-reassign': 'off',
   },
   globals: {
     __IS_DEV__: true,
   },
   overrides: [
     {
-      files: ['**/src/**/*.{test,stories}.ts?x'],
+      files: '**/*.{test,stories}.{ts,tsx}',
       rules: {
+        '@typescript-eslint/no-floating-promises': 'off',
         'i18next/no-literal-string': 'off',
         'max-len': 'off',
       },
