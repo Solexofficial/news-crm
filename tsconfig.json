@@ -24,6 +24,12 @@
       "module": "CommonJS"
     }
   },
-  "include": [".eslintrc.js", "**/*.ts", "**/*.tsx"],
+  "include": [
+    ".eslintrc.js",
+    "**/*.ts",
+    "**/*.tsx",
+    "json-server/index.ts",
+    "json-server/index.ts"
+  ],
   "exclude": ["./node_modules", "./dist", "./scripts"]
 }
