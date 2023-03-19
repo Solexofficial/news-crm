@@ -8,12 +8,14 @@ type ModalProps = {
   children?: ReactNode;
   isOpen: boolean;
   onClose?: () => void;
+  lazy?: boolean;
 };
 
 const ANIMATION_DELAY = 300;
 
-export const Modal: FC<ModalProps> = ({ children, className = '', isOpen, onClose }) => {
+export const Modal: FC<ModalProps> = ({ children, className = '', isOpen, onClose, lazy }) => {
   const [isClosing, setIsClosing] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -50,6 +52,16 @@ export const Modal: FC<ModalProps> = ({ children, className = '', isOpen, onClos
       window.removeEventListener('keydown', keyDownHandler);
     };
   }, [isOpen, keyDownHandler]);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true);
+    }
+  }, [isOpen]);
+
+  if (lazy && !isMounted) {
+    return null;
+  }
 
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,

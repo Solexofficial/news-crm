@@ -27,6 +27,7 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/prop-types': 'off',
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
